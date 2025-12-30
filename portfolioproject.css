@@ -79,26 +79,28 @@
       font-size: 20px;
       font-weight: 700;
     }
-    #header-name{
-      width: 30ch;
-      
-      font-family: monospace;
-      margin: 0px 7vw;
-      color:#f1ecda;
-      
-      background: linear-gradient(to right,#81eb07,#cfae35,#0266e9 );
-      font-size: 25px;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-wrap: nowrap;
-      overflow: hidden;
-      animation: typing 3s steps(30) infinite alternate-reverse;
-    }
+  #header-name{
+  display: inline-block;
+  max-width: 90vw;     /* KEY FIX */
+  width: 30ch;
+  margin: 0 auto;      /* REMOVE vw margins */
+  font-family: monospace;
+  font-size: 25px;
+  white-space: nowrap;
+  overflow: hidden;
+
+  background: linear-gradient(to right,#81eb07,#cfae35,#0266e9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: typing 3s steps(30) infinite alternate;
+  }
 
     @keyframes typing{
       from{
         width: 0ch;
       }
+        to{ width: 30ch;}
     }
     nav {
       max-width: 100%;
@@ -445,4 +447,5 @@
     #imageFolder{
       color: #000000;
     }
+
 
