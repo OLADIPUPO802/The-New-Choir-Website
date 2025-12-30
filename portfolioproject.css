@@ -72,12 +72,18 @@
       background:#5e4074;
       margin-bottom: 8vh;
     }
-    
+    h3{
+      text-align: center;
+      color: #424040;
+      margin-bottom: 22px;
+      font-size: 20px;
+      font-weight: 700;
+    }
     #header-name{
       width: 30ch;
       
       font-family: monospace;
-      margin: 0px 20vw;
+      margin: 0px 7vw;
       color:#f1ecda;
       
       background: linear-gradient(to right,#81eb07,#cfae35,#0266e9 );
@@ -177,7 +183,7 @@
       opacity: 0.95;
       margin-top: 6px;
     }
-    .hero .cta {
+    .about-header .cta {
       display: inline-block;
       margin-top: 18px;
       background: #007bff;
@@ -187,7 +193,7 @@
       font-weight: 700;
       transition: transform .14s ease, background .14s;
     }
-    .hero .cta:hover { transform: translateY(-3px); background: #0056b3; }
+    .about-header .cta:hover { transform: translateY(-3px); background: #0056b3; text-decoration: none; }
 
     /* ------- SECTIONS ------- */
     .container {
