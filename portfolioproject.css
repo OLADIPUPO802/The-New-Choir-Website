@@ -1,0 +1,413 @@
+
+    /* ------- Reset & base ------- */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html,body { height: 100%; }
+    body {
+      font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: #f1ecda;
+      color: #758695;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+
+    .youtube-icon{
+      color: #ffffff;
+      transition: 0.3s;
+    }
+    .youtube-icon:hover{
+      transform: scale(1.2);
+      color: darkred;
+    }
+    .message-icon{
+      color: #ffffff
+    }
+    .tiktok-icon{
+      color: white;
+    }
+    .tiktok-icon:hover{
+      color: (#000000);
+    }
+    .address-icon{
+      color: #ffffff;
+    }
+    .address-icon:hover{
+      color: #ffffff;
+    }
+    button{
+      cursor: pointer;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+    button:hover{
+      background-color: #0056b3;
+    }
+    i{
+      font-size: 29px;
+      color: #ffffff;
+    }
+    i:hover{
+      
+      transform:scale(1.2)
+    }
+    a { text-decoration: none; }
+    a:hover{text-decoration: underline; }
+    a:active,:visited{color: #0056b3;}
+   
+
+    /* ------- NAV ------- */
+    .nav-wrap {
+      max-width: 100%;
+      background: #ffffff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+      position: sticky;
+      top: 0;
+      z-index: 60;
+    }
+    .site-header{
+      background:#5e4074;
+      margin-bottom: 8vh;
+    }
+    
+    #header-name{
+      width: 30ch;
+      
+      font-family: monospace;
+      margin: 0px 20vw;
+      color:#f1ecda;
+      
+      background: linear-gradient(to right,#81eb07,#cfae35,#0266e9 );
+      font-size: 25px;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-wrap: nowrap;
+      overflow: hidden;
+      animation: typing 3s steps(30) infinite alternate-reverse;
+    }
+
+    @keyframes typing{
+      from{
+        width: 0ch;
+      }
+    }
+    nav {
+      max-width: 100%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 14px 20px;
+    }
+    .brand {
+      font-weight: ;
+      font-size: 20px;
+      color: #f7f9ec;
+    }
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+    }
+    nav a {
+      color: #d8d3d3;
+      padding: 6px 10px;
+      border-radius: 6px;
+      transition: color .18s, background .18s;
+      font-weight: 500;
+    }
+    nav a:active,:visited{
+      color: #d8d3d3;
+      text-decoration: none;
+    }
+    nav a:hover{
+      color: #a7a4a4;
+      text-decoration: none;
+    text-decoration-line: 5px;}
+    
+
+
+    .nav-links a:hover { color: #007bff; background: rgba(0,123,255,0.06); }
+
+    /* ------- HERO ------- */
+    .hero {
+      position: relative;
+      height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      background: url(TGP-CHOIR.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.36); /* overlay helps text read on image */
+      z-index: 1;
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 960px;
+      padding: 20px;
+    }
+    .hero h1 {
+      font-size: 48px;
+      line-height: 1.02;
+      margin-bottom: 12px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .hero p.lead {
+      font-size: 18px;
+      margin-bottom: 16px;
+      opacity: 0.95;
+    }
+    .hero blockquote {
+      font-size: 18px;
+      font-style: italic;
+      opacity: 0.95;
+      margin-top: 6px;
+    }
+    .hero .cta {
+      display: inline-block;
+      margin-top: 18px;
+      background: #007bff;
+      color: #fff;
+      padding: 12px 22px;
+      border-radius: 10px;
+      font-weight: 700;
+      transition: transform .14s ease, background .14s;
+    }
+    .hero .cta:hover { transform: translateY(-3px); background: #0056b3; }
+
+    /* ------- SECTIONS ------- */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 56px 20px;
+    }
+    h2 {
+      text-align: center;
+      color: #111;
+      margin-bottom: 22px;
+      font-size: 28px;
+      font-weight: 700;
+    }
+    .lead-text {
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto 28px;
+      color: #333;
+      font-size: 16px;
+      opacity: 0.95;
+    }
+    #video-link{
+       display: inline-block;
+       
+      margin-top: 18px;
+      background: #007bff;
+      color: #fff;
+      
+      padding: 12px 22px;
+      border-radius: 10px;
+      font-weight: 700;
+      transition: transform .14s ease, background .14s;
+    }
+    #video-link:hover { transform: translateY(-3px); background: #0056b3; }
+
+  
+    /* About + schedule columns */
+    .cols {
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 28px;
+      align-items: start;
+    }
+    .card {
+      background: #695b5b;
+      padding: 22px;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(22,22,22,0.04);
+    }
+
+    .schedule ul { list-style: disc; padding-left: 20px; }
+    .schedule li { margin: 8px 0; font-weight: 600; color: #e7e7e7; }
+
+    /* Gallery */
+    .gallery-grid {
+      column-count: 3;
+      column-gap: 2px;
+    }
+    .gallery-grid img {
+      width: 100%;
+      display: block;
+      border-radius: 5px;
+      height: auto;
+      margin-bottom: 2px;
+      border: 3px solid rgba(0,123,255,0.10);
+    }
+    .newsletter input{
+      width: 70%;
+      padding: 12px 14px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-bottom: 15px;
+      font-size: 15px;
+    }
+    #news-submit{
+      width: 70%;
+      padding: 7px 0px;
+      background-color: #007bff;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    #news-submit:hover{
+      
+      background-color: #0056b3;
+    }
+
+
+    /* Footer */
+    footer {
+      background: #5e4074;
+      color: #d5d5d5;
+      padding: 28px 20px;
+      margin-top: 36px;
+    }
+    footer .wrap {
+      text-align: center;
+      font-size: 24px;
+    }
+    .alone{
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 23px;
+      flex-wrap: wrap;
+    }
+    .footer-nav a{
+      font-size: 15px;
+      color:#ccc9c0 ;
+      justify-content: center;
+      text-align: ;
+      margin: 4px;
+    }
+    .footer-nav a:hover{
+      color:#819137f1;
+      text-decoration: none;
+    }
+    #small-text{
+      font-size: 17px;
+      color: #f1ecda;
+      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      text-align: left;
+    }
+    #no-align{
+      text-align: start;
+      
+    }
+    footer a { color: #4da3ff; text-decoration: none; font-weight: 600; }
+
+    /* Responsive */
+    @media (max-width: 800px) {
+      .hero h1 { font-size: 36px; }
+      nav { padding: 12px; }
+       nav {
+      max-width: 100%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+    }
+    .hero {
+      position: relative;
+      
+      margin-bottom: -260px;
+      height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      background: url(TGP-CHOIR.jpg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 100%;
+    }
+    
+    .hero::before {
+      height: 345px;
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.36); /* overlay helps text read on image */
+      z-index: 1;
+    }
+    .hero-inner {
+      position: relative;
+      
+      width: 400px;
+      margin-top: -300px;
+    }
+    .hero h1 {
+      font-size: 48px;
+      line-height: 1.02;
+      margin-bottom: 12px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .hero p.lead {
+      font-size: 18px;
+      margin-bottom: 16px;
+      opacity: 0.95;
+    }
+    .hero blockquote {
+      font-size: 18px;
+      font-style: italic;
+      opacity: 0.95;
+      margin-top: 6px;
+    }
+    .hero .cta {
+      display: inline-block;
+      margin-top: 18px;
+      background: #007bff;
+      color: #fff;
+      padding: 12px 22px;
+      border-radius: 10px;
+      font-weight: 700;
+      transition: transform .14s ease, background .14s;
+    }
+    .hero .cta:hover { transform: translateY(-3px); background: #0056b3; }
+
+      .gallery-grid{
+        column-count: 1;
+      }
+      .nav-links { display: none; } 
+      /* simple mobile collapse */
+    }
+    .screen{
+      display: none;
+      padding: 2rem;
+      text-align: center;
+    }
+    .screen.active{
+      display: block;
+    }
+    #imageFolder{
+      color: #000000;
+    }
