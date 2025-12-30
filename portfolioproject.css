@@ -142,48 +142,58 @@
 
     /* ------- HERO ------- */
     .hero {
-      position: relative;
-      height: 600px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: #fff;
-      background: url(TGP-CHOIR.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 100%;
-    }
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.36); /* overlay helps text read on image */
-      z-index: 1;
-    }
-    .hero-inner {
-      position: relative;
-      z-index: 2;
-      max-width: 960px;
-      padding: 20px;
-    }
-    .hero h1 {
-      font-size: 48px;
-      line-height: 1.02;
-      margin-bottom: 12px;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-    }
-    .hero p.lead {
-      font-size: 18px;
-      margin-bottom: 16px;
-      opacity: 0.95;
-    }
-    .hero blockquote {
-      font-size: 18px;
-      font-style: italic;
-      opacity: 0.95;
-      margin-top: 6px;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;                 /* keeps full image visible */
+  background: url(TGP-CHOIR.jpg) center / contain no-repeat;
+  background-color: #000;               /* fills empty space */
+  display: flex;
+  align-items: flex-end;                /* text stays inside image */
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Overlay for readability */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.55),
+    rgba(0,0,0,0.05)
+  );
+  z-index: 1;
+}
+
+/* Hero content */
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 90%;
+  padding: 1.5rem;
+  text-align: center;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: clamp(24px, 6vw, 48px);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+
+.hero p.lead {
+  font-size: clamp(14px, 4vw, 18px);
+  opacity: 0.95;
+}
+
+.hero blockquote {
+  font-size: clamp(14px, 4vw, 18px);
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
     }
     .about-header .cta {
       display: inline-block;
@@ -447,5 +457,6 @@
     #imageFolder{
       color: #000000;
     }
+
 
 
